@@ -4360,10 +4360,116 @@ body.invitation-open .music-player {
 }
 
 @media (max-width: 430px) {
+  /* Performance: mobile-first reduces blur/animations while keeping visual style. */
+
+  .scroll-progress {
+    backdrop-filter: none !important;
+  }
+
+  .watercolor-card,
+  .timeline-card,
+  .info-card,
+  .location-card,
+  .music-player,
+  .section-card,
+  .fee-card,
+  .event-details {
+    backdrop-filter: none !important;
+  }
+
+  .opening-content > * {
+    filter: none !important;
+  }
+
+  /* Cheaper reveal: avoid blur; keep slide/fade */
+  .reveal-step,
+  .reveal-card,
+  .reveal-item {
+    filter: none !important;
+    transition-duration: 420ms;
+  }
+
+  /* Stop reveal from animating every tiny element; keep major blocks */
+  .reveal-step,
+  .reveal-card,
+  .reveal-item {
+    opacity: 1 !important;
+    transform: none !important;
+    transition: none !important;
+  }
+
+  .intro-panel .reveal-step,
+  .event-details .reveal-step,
+  .fee-section .reveal-step,
+  .rundown-section .reveal-step,
+  .closing-section .reveal-step {
+    opacity: 0;
+    transform: translateY(18px);
+    transition: opacity 420ms ease-out, transform 420ms ease-out;
+  }
+
+  .reveal.is-visible .reveal-step {
+    opacity: 1;
+    transform: none;
+  }
+
+  /* Reduce infinite decoration animations */
+  body::before,
+  .opening-screen::before,
+  .wave-divider svg,
+  .beam-one,
+  .beam-two,
+  .beam-three,
+  .beam-four,
+  .beam-five,
+  .sparkle,
+  .petal,
+  .glow-streak,
+  .string-light,
+  .cloud,
+  .palm,
+  .wave,
+  .scene-glitter,
+  .scene-ball,
+  .scene-flowers,
+  .about-petals,
+  .about-sparkles,
+  .closing-petals,
+  .closing-sparkle,
+  .closing-wave.one,
+  .closing-wave.two,
+  .section-card,
+  .fee-card,
+  .event-details,
+  .closing-section,
+  .opening-content::after,
+  .section-card::before,
+  .fee-card::before,
+  .event-details::before,
+  .closing-section::before,
+  .section-card::after,
+  .fee-card::after,
+  .event-details::after,
+  .closing-section::after {
+    animation: none !important;
+  }
+
+  /* Keep only music bars animation (when user plays) */
+  .music-bars i {
+    animation: musicBar 760ms ease-in-out infinite;
+  }
+
+  /* Reduce shadow intensity a bit */
+  :root {
+    --shadow: 0 10px 24px rgba(185, 77, 85, 0.14);
+    --soft-shadow: 0 8px 18px rgba(177, 101, 75, 0.11);
+  }
+
   .opening-content {
     /* keep mobile safe padding consistent with requirement */
     padding: 16px 24px;
   }
+
 
   .opening-content p,
   .opening-note {

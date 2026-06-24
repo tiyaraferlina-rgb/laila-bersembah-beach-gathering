@@ -58,38 +58,17 @@ const burst = (sourceElement, count = 10) => {
 };
 
 // Subtle parallax keeps the invitation feeling alive without heavy runtime cost.
+// Mobile performance: avoid per-scroll/parallax transforms.
+// Keep the function no-op and scheduleParallax disabled to prevent stutter.
 const updateParallax = () => {
-  if (reduceMotion) {
-    parallaxFrame = null;
-    return;
-  }
-
-  const scrollY = window.scrollY;
-  const viewport = Math.max(window.innerHeight, 1);
-
-  parallaxNodes.forEach((element, index) => {
-    const depth = (index % 6) + 1;
-
-    // Scroll-only drift (no pointer tracking) for an elegant, non-chaotic feel.
-    const driftX =
-      Math.sin(scrollY / 320 + index * 0.35) * (1.5 + depth * 0.55);
-    const driftY =
-      Math.sin(scrollY / 240 + index * 0.55) * (2.0 + depth * 1.05) +
-      (scrollY / viewport) * depth * 1.0;
-
-    element.style.translate = `${driftX.toFixed(2)}px ${driftY.toFixed(2)}px`;
-  });
-
   parallaxFrame = null;
 };
 
 const scheduleParallax = () => {
-  if (parallaxFrame !== null) {
-    return;
-  }
-
-  parallaxFrame = window.requestAnimationFrame(updateParallax);
+  // Intentionally disabled for scroll performance.
+  parallaxFrame = null;
 };
+
 
 const updateScrollProgress = () => {
   if (!scrollProgressBar) {
@@ -315,14 +294,13 @@ const toggleBackToTop = () => {
 };
 
 window.addEventListener("scroll", toggleBackToTop, { passive: true });
-window.addEventListener("scroll", scheduleParallax, { passive: true });
 window.addEventListener("scroll", updateScrollProgress, { passive: true });
 // Pointer tracking intentionally removed for desktop elegance.
 // Decorations should react subtly to scroll only, not the user's cursor.
 
 toggleBackToTop();
-scheduleParallax();
 updateScrollProgress();
+
 
 window.addEventListener("resize", updateScrollProgress, { passive: true });
 
@@ -341,6 +319,8 @@ if (backToTop) {
 }
 
 if (musicPlayer && music) {
-  musicPlayer.addEventListener("pointerenter", scheduleParallax);
-  musicPlayer.addEventListener("pointermove", scheduleParallax);
+  // Disabled: avoid any scroll-parallax-like computations on mobile.
+  musicPlayer.addEventListener("pointerenter", () => undefined);
+  musicPlayer.addEventListener("pointermove", () => undefined);
 }
+
