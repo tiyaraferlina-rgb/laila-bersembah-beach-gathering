@@ -1,0 +1,472 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#ff8f88" />
+    <title>Beach Gathering - Dance Extracurricular Alumni</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Shippori+Mincho:wght@600;700&family=Nunito:wght@400;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="scroll-progress" aria-hidden="true">
+      <span id="scrollProgressBar"></span>
+    </div>
+    <audio id="bgMusic" preload="none" loop>
+      <!-- Placeholder audio source; replace with the real Rollerblade - Noona file when available. -->
+      <source
+        src="assets/audio/rollerblade-noona-placeholder.mp3"
+        type="audio/mpeg"
+      />
+    </audio>
+
+    <section
+      class="opening-screen"
+      id="openingScreen"
+      aria-label="Opening invitation cover"
+    >
+      <div class="sunset-sky" aria-hidden="true">
+        <span class="luxury-beam beam-one"></span>
+        <span class="luxury-beam beam-two"></span>
+        <span class="luxury-beam beam-three"></span>
+        <span class="glow-sun"></span>
+        <span class="sparkle sparkle-a"></span>
+        <span class="sparkle sparkle-b"></span>
+        <span class="sparkle sparkle-c"></span>
+        <span class="sparkle sparkle-d"></span>
+        <span class="petal petal-a"></span>
+        <span class="petal petal-b"></span>
+        <span class="petal petal-c"></span>
+        <span class="cloud cloud-one"></span>
+        <span class="cloud cloud-two"></span>
+        <span class="palm palm-left"></span>
+        <span class="palm palm-right"></span>
+        <span class="string-light light-one"></span>
+        <span class="string-light light-two"></span>
+        <span class="string-light light-three"></span>
+        <span class="disco-ball hero-disco"></span>
+        <span class="surfboard surf-left"></span>
+        <span class="surfboard surf-right"></span>
+        <span class="flower flower-a"></span>
+        <span class="flower flower-b"></span>
+        <span class="flower flower-c"></span>
+        <span class="citrus citrus-a"></span>
+        <span class="citrus citrus-b"></span>
+        <span class="shell shell-a"></span>
+        <span class="shell shell-b"></span>
+        <span class="starfish starfish-a"></span>
+        <span class="starfish starfish-b"></span>
+        <div class="ocean" aria-hidden="true">
+          <span class="wave wave-one"></span>
+          <span class="wave wave-two"></span>
+          <span class="wave wave-three"></span>
+        </div>
+      </div>
+
+      <div class="opening-content">
+        <div class="opening-chip">Beach Gathering</div>
+        <p class="eyebrow">You're Invited</p>
+        <h1>Beach Gathering</h1>
+        <h2>Laila Bersembah Anggota & Alumni</h2>
+        <span class="title-divider" aria-hidden="true"></span>
+        <p class="opening-subtitle">
+          Let's meet again and create new memories together.
+        </p>
+        <button class="primary-button" id="openInvitation" type="button">
+          Open Invitation
+        </button>
+        <p class="opening-note">click the button &amp; the music will play ♪</p>
+      </div>
+    </section>
+
+    <main class="site-shell" id="mainContent">
+      <section
+        class="intro-panel reveal"
+        id="description"
+        aria-labelledby="descriptionTitle"
+      >
+        <div class="section-card watercolor-card">
+          <span class="corner-flower top-left" aria-hidden="true"></span>
+          <span class="corner-flower bottom-right" aria-hidden="true"></span>
+          <span class="glow-streak glow-streak-one" aria-hidden="true"></span>
+          <span class="glow-streak glow-streak-two" aria-hidden="true"></span>
+          <span class="luxury-ribbon ribbon-left" aria-hidden="true"></span>
+          <span class="luxury-ribbon ribbon-right" aria-hidden="true"></span>
+          <span class="section-scene scene-intro" aria-hidden="true">
+            <span class="scene-postcard postcard-a"></span>
+            <span class="scene-postcard postcard-b"></span>
+            <span class="scene-stamp stamp-a"></span>
+            <span class="scene-palm-shadow shadow-a"></span>
+            <span class="scene-glitter glitter-a"></span>
+            <span class="scene-glitter glitter-b"></span>
+            <span class="scene-note note-a"></span>
+          </span>
+          <h2 id="descriptionTitle" class="reveal-step step-2">
+            About Our Gathering
+          </h2>
+          <p class="reveal-step step-3">
+            Beach Gathering ini diselenggarakan sebagai wadah untuk
+            mempertemukan kembali anggota aktif dan alumni Laila Bersembah dalam
+            suasana kebersamaan dan kekeluargaan.
+          </p>
+          <p class="reveal-step step-4">
+            Melalui kegiatan ini, diharapkan hubungan yang telah terjalin dapat
+            terus terjaga, sekaligus menjadi kesempatan untuk berbagi pengalaman
+            dan menciptakan momen yang berkesan bersama.
+          </p>
+          <p class="reveal-step step-5">See you on the beach, dancers!</p>
+
+          <div class="about-floral-beach" aria-hidden="true">
+            <span class="about-flower hibiscus-h1"></span>
+            <span class="about-flower frangipani-h2"></span>
+            <span class="about-flower frangipani-h3"></span>
+            <span class="about-leaf leaf-left"></span>
+            <span class="about-leaf leaf-right"></span>
+
+            <span class="about-waves waves-back"></span>
+            <span class="about-waves waves-front"></span>
+
+            <span class="about-shell shell-1"></span>
+            <span class="about-shell shell-2"></span>
+            <span class="about-starfish star-1"></span>
+            <span class="about-starfish star-2"></span>
+
+            <span class="about-petals petals-1"></span>
+            <span class="about-petals petals-2"></span>
+            <span class="about-petals petals-3"></span>
+
+            <span class="about-sparkles sparkle-1"></span>
+            <span class="about-sparkles sparkle-2"></span>
+          </div>
+        </div>
+      </section>
+
+      <div class="wave-divider" aria-hidden="true">
+        <svg viewBox="0 0 1440 110" preserveAspectRatio="none">
+          <path
+            d="M0,64 C170,112 300,24 470,58 C650,94 790,114 960,62 C1120,14 1260,24 1440,74 L1440,110 L0,110 Z"
+          ></path>
+        </svg>
+      </div>
+
+      <section
+        class="event-details reveal"
+        id="details"
+        aria-labelledby="detailsTitle"
+      >
+        <span class="section-scene scene-details" aria-hidden="true">
+          <span class="scene-shell shell-one"></span>
+          <span class="scene-shell shell-two"></span>
+          <span class="scene-wave wave-a"></span>
+          <span class="scene-wave wave-b"></span>
+        </span>
+        <div class="section-heading">
+          <h2 id="detailsTitle" class="reveal-step step-2">
+            Date, Time & Place
+          </h2>
+        </div>
+
+        <div class="info-grid">
+          <article class="info-card reveal-card card-1">
+            <span class="line-icon calendar-icon" aria-hidden="true"></span>
+            <p>Day</p>
+            <strong>Saturday</strong>
+          </article>
+          <article class="info-card reveal-card card-2">
+            <span class="line-icon date-icon" aria-hidden="true"></span>
+            <p>Date</p>
+            <strong>18 July 2026</strong>
+          </article>
+          <article class="info-card reveal-card card-3">
+            <span class="line-icon clock-icon" aria-hidden="true"></span>
+            <p>Time</p>
+            <strong>07:00 WIB</strong>
+          </article>
+        </div>
+
+        <article class="location-card reveal-step step-3">
+          <span class="pin-icon" aria-hidden="true"></span>
+          <div>
+            <p>Location</p>
+            <strong>Pantai Halona, Jembatan 6, Galang, Kota Batam</strong>
+          </div>
+        </article>
+
+        <div
+          class="countdown reveal-step step-4"
+          id="countdown"
+          data-target="2026-07-18T07:00:00+07:00"
+          aria-label="Countdown to event"
+        >
+          <div>
+            <strong id="days">00</strong>
+            <span>Days</span>
+          </div>
+          <div>
+            <strong id="hours">00</strong>
+            <span>Hours</span>
+          </div>
+          <div>
+            <strong id="minutes">00</strong>
+            <span>Minutes</span>
+          </div>
+          <div>
+            <strong id="seconds">00</strong>
+            <span>Seconds</span>
+          </div>
+        </div>
+
+        <a class="secondary-button reveal-step step-5"
+          href="https://maps.app.goo.gl/ZA5bVpGyk2jpeJ5S8"
+          target="_blank"
+          rel="noopener noreferrer">
+          Open Maps
+        </a>
+      </section>
+
+      <div class="wave-divider wave-light" aria-hidden="true">
+        <svg viewBox="0 0 1440 110" preserveAspectRatio="none">
+          <path
+            d="M0,76 C160,28 310,84 460,62 C640,36 760,4 940,42 C1120,80 1260,114 1440,52 L1440,110 L0,110 Z"
+          ></path>
+        </svg>
+      </div>
+
+      <section class="fee-section reveal" id="fee" aria-labelledby="feeTitle">
+        <div class="fee-card">
+          <span class="section-scene scene-fee" aria-hidden="true">
+            <span class="scene-cocktail cocktail-a"></span>
+            <span class="scene-cocktail cocktail-b"></span>
+            <span class="scene-citrus citrus-one"></span>
+            <span class="scene-citrus citrus-two"></span>
+            <span class="scene-ball disco-mini"></span>
+            <span class="scene-ribbon ribbon-a"></span>
+            <span class="scene-ribbon ribbon-b"></span>
+          </span>
+          <span class="drink-illustration" aria-hidden="true"></span>
+          <span class="floating-fruit fruit-one" aria-hidden="true"></span>
+          <span class="floating-fruit fruit-two" aria-hidden="true"></span>
+          <span class="sparkle sparkle-e" aria-hidden="true"></span>
+          <span class="sparkle sparkle-f" aria-hidden="true"></span>
+          <span class="luxury-ribbon ribbon-top" aria-hidden="true"></span>
+          <p class="section-kicker reveal-step step-1">Contribution Fee</p>
+          <h2 id="feeTitle" class="reveal-step step-2">Rp200.000</h2>
+          <strong class="reveal-step step-3">per participant</strong>
+          <p class="fee-copy reveal-step step-4">
+            Contribution includes transportation, food & drinks, beach
+            activities, and group documentation.
+          </p>
+
+          <div
+            class="benefit-list reveal-step step-5"
+            aria-label="Contribution includes"
+          >
+            <div>
+              <span class="benefit-icon bus-icon" aria-hidden="true"></span
+              >Transportation
+            </div>
+            <div>
+              <span class="benefit-icon drink-icon" aria-hidden="true"></span
+              >Food & Drinks
+            </div>
+            <div>
+              <span class="benefit-icon wave-icon" aria-hidden="true"></span
+              >Games & Activities
+            </div>
+            <div>
+              <span class="benefit-icon camera-icon" aria-hidden="true"></span
+              >Group Documentation
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section
+        class="rundown-section reveal"
+        id="rundown"
+        aria-labelledby="rundownTitle"
+      >
+        <div class="section-card timeline-card">
+          <span class="section-scene scene-rundown" aria-hidden="true">
+            <span class="sign-post sign-a"></span>
+            <span class="sign-post sign-b"></span>
+            <span class="sand-dune dune-a"></span>
+            <span class="sand-dune dune-b"></span>
+            <span class="scene-flowers flower-a"></span>
+            <span class="scene-flowers flower-b"></span>
+          </span>
+          <div class="section-heading">
+            <span class="reveal-step step-1">Rundown Acara</span>
+            <h2 id="rundownTitle" class="reveal-step step-2">Rundown Acara</h2>
+          </div>
+
+          <ol class="timeline">
+            <li class="timeline-item reveal-item">
+              <time>07:00</time><span></span>
+              <p>Keberangkatan (OTW)</p>
+            </li>
+            <li class="timeline-item reveal-item">
+              <time>09:00</time><span></span>
+              <p>Tiba di Lokasi & Sesi Foto</p>
+            </li>
+            <li class="timeline-item reveal-item">
+              <time>10:00</time><span></span>
+              <p>Snack Time</p>
+            </li>
+            <li class="timeline-item reveal-item">
+              <time>10:20</time><span></span>
+              <p>Opening</p>
+            </li>
+            <li class="timeline-item reveal-item">
+              <time>10:30</time><span></span>
+              <p>Game Session</p>
+            </li>
+            <li class="timeline-item reveal-item">
+              <time>13:00</time><span></span>
+              <p>BBQ Lunch</p>
+            </li>
+            <li class="timeline-item reveal-item">
+              <time>13:00</time><span></span>
+              <p>Free Time & Swimming</p>
+            </li>
+            <li class="timeline-item reveal-item">
+              <time>17:00</time><span></span>
+              <p>Return Home</p>
+            </li>
+          </ol>
+        </div>
+      </section>
+
+      <section
+        class="closing-section reveal"
+        id="closing"
+        aria-labelledby="closingTitle"
+      >
+        <div class="closing-sunset" aria-hidden="true">
+          <span class="luxury-beam beam-four"></span>
+          <span class="luxury-beam beam-five"></span>
+          <span class="closing-sun"></span>
+          <span class="sparkle sparkle-g"></span>
+          <span class="sparkle sparkle-h"></span>
+          <span class="closing-wave one"></span>
+          <span class="closing-wave two"></span>
+          <span class="closing-palm"></span>
+          <span class="disco-ball closing-disco"></span>
+        </div>
+
+        <span class="section-scene scene-closing" aria-hidden="true">
+          <span class="memory-note note-a"></span>
+          <span class="memory-note note-b"></span>
+          <span class="memory-note note-c"></span>
+          <span class="memory-flower flower-one"></span>
+          <span class="memory-flower flower-two"></span>
+          <span class="memory-beach-sand"></span>
+          <span class="memory-petals closing-petals-1"></span>
+          <span class="memory-petals closing-petals-2"></span>
+          <span class="memory-waves closing-waves"></span>
+          <span class="memory-shells closing-shells-1"></span>
+          <span class="memory-shells closing-shells-2"></span>
+          <span class="memory-tropical-leaves closing-leaves"></span>
+          <span class="memory-starfish closing-starfish"></span>
+          <span class="memory-sparkles closing-sparkles-1"></span>
+          <span class="memory-sparkles closing-sparkles-2"></span>
+        </span>
+
+        <div class="closing-content">
+          <div class="opening-chip closing-chip reveal-step step-1">
+            Golden hour finale
+          </div>
+          <p class="section-kicker reveal-step step-2">See You There!</p>
+          <h2 id="closingTitle" class="reveal-step step-3">See You There!</h2>
+          <br class="reveal-step step-4">
+            Terima kasih atas kebersamaan yang telah terjalin. Mari luangkan waktu untuk berkumpul, berbagi cerita, dan menikmati momen yang menyenangkan bersama keluarga besar Laila Bersembah.<br>
+            <br>See you at the beach!</br>
+          </p>
+
+          <div class="closing-floral-beach" aria-hidden="true">
+            <span class="closing-arrangement hibiscus-c1"></span>
+            <span class="closing-arrangement frangipani-c2"></span>
+            <span class="closing-waves c-waves-1"></span>
+            <span class="closing-waves c-waves-2"></span>
+            <span class="closing-shell c-shell-1"></span>
+            <span class="closing-shell c-shell-2"></span>
+            <span class="closing-starfish c-star-1"></span>
+            <span class="closing-leaf c-leaf-1"></span>
+            <span class="closing-leaf c-leaf-2"></span>
+            <span class="closing-petals c-petal-1"></span>
+            <span class="closing-petals c-petal-2"></span>
+            <span class="closing-sparkle c-spark-1"></span>
+            <span class="closing-sparkle c-spark-2"></span>
+          </div>
+
+          <blockquote class="reveal-step step-5">
+            "Some dances may end, but the memories remain."
+          </blockquote>
+        </div>
+
+        <footer>Made with love for Dance Alumni Gathering</footer>
+      </section>
+    </main>
+
+    <section class="music-player" id="musicPlayer" aria-label="Music player">
+      <div class="music-player__art" aria-hidden="true"></div>
+      <div class="music-player__copy">
+        <strong>Rollerblade - Noona</strong>
+        <span id="musicStatus">Now Playing</span>
+      </div>
+      <div class="music-player__controls">
+        <button
+          class="music-control music-control--ghost"
+          id="musicPrev"
+          type="button"
+          aria-label="Previous track"
+        >
+          ⏮
+        </button>
+        <button
+          class="music-control music-control--main"
+          id="musicToggle"
+          type="button"
+          aria-label="Toggle background music"
+          hidden
+        >
+          <span class="music-bars" aria-hidden="true"
+            ><i></i><i></i><i></i
+          ></span>
+        </button>
+        <button
+          class="music-control music-control--ghost"
+          id="musicNext"
+          type="button"
+          aria-label="Next track"
+        >
+          ⏭
+        </button>
+        <button
+          class="music-control music-control--ghost"
+          id="musicMute"
+          type="button"
+          aria-label="Mute music"
+        >
+          ♪
+        </button>
+      </div>
+    </section>
+
+    <button
+      class="back-to-top"
+      id="backToTop"
+      type="button"
+      aria-label="Back to top"
+    >
+      <span aria-hidden="true"></span>
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
